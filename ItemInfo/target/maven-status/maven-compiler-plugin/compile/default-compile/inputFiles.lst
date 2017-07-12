@@ -1,0 +1,9 @@
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/service/ItemRepository.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/service/ItemService.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/config/ApplicationConfiguration.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/data/Item.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/SpringBootWebApplication.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/service/ItemRepositoryCustom.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/data/HelloWorld.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/web/ItemServiceController.java
+/home/msa/MicroServices/ItemInfo/src/main/java/com/niit/microservices/service/ItemRepositoryImpl.java
