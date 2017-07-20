@@ -43,9 +43,9 @@ public class ApplicationConfiguration {
 	}
 
 	@Bean(name="myCustomRepository")
-	public ItemRepositoryCustom getMessageRepository() {
-		ItemRepositoryCustom messageRepository = new ItemRepositoryImpl();
-		return messageRepository;
+	public ItemRepositoryCustom getItemRepository() {
+		ItemRepositoryCustom itemRepository = new ItemRepositoryImpl();
+		return itemRepository;
 	}
 	
 	@Bean

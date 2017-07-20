@@ -20,9 +20,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import com.niit.microservices.data.HelloWorld;
-import com.niit.microservices.service.MessageRepositoryCustom;
-import com.niit.microservices.service.MessageRepositoryImpl;
 
 @Configuration
 @EnableWebMvc
@@ -32,19 +29,6 @@ import com.niit.microservices.service.MessageRepositoryImpl;
 })
 @EnableTransactionManagement
 public class ApplicationConfiguration {
-
-	@Bean
-	public HelloWorld getHelloWorld() {
-		HelloWorld helloWorld = new HelloWorld();
-		helloWorld.setMessage("Hello World");
-		return helloWorld;
-	}
-
-	@Bean(name="myCustomRepository")
-	public MessageRepositoryCustom getMessageRepository() {
-		MessageRepositoryCustom messageRepository = new MessageRepositoryImpl();
-		return messageRepository;
-	}
 	
 	@Bean
 	public DataSource dataSource() throws SQLException {

@@ -8,5 +8,7 @@ import com.niit.microservices.data.Item;
 @Repository
 public interface ItemRepository extends CrudRepository<Item, Integer>, ItemRepositoryCustom{
 
-	public Item getByItemID(Integer id);
+	Item getByItemID(Integer id);
+	
+	void addItem(Item item);
 }

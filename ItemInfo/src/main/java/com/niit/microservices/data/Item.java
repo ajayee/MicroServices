@@ -1,5 +1,7 @@
 package com.niit.microservices.data;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,11 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Items")
+@Table(name = "ITEM")
 public class Item {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ITEM_ID")
 	private Integer itemID;
 
 	public Integer getItemID() {
@@ -23,7 +25,7 @@ public class Item {
 		this.itemID = itemID;
 	}
 
-	@Column(name = "Name")
+	@Column(name = "NAME")
 	private String Name;
 
 	public String getName() {
@@ -32,5 +34,50 @@ public class Item {
 
 	public void setName(String name) {
 		Name = name;
+	}
+	
+	@Column(name = "MODEL_NUM")
+	private String modelNumber;
+	
+	public String getModelNumber() {
+		return modelNumber;
+	}
+
+	public void setModelNumber(String modelNumber) {
+		this.modelNumber = modelNumber;
+	}
+
+
+	@Column(name = "BATTERIES_REQUIRED")
+	private boolean batteriesRequired;
+	
+	public boolean isBatteriesRequired() {
+		return batteriesRequired;
+	}
+
+	public void setBatteriesRequired(boolean batteriesRequired) {
+		this.batteriesRequired = batteriesRequired;
+	}
+
+	@Column(name = "WEIGHT")
+	private Integer weight;
+	
+	public Integer getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Integer weight) {
+		this.weight = weight;
+	}
+
+	@Column(name = "MANUFACTURING_DATE")
+	private Date manufacturingDate;
+
+	public Date getManufacturingDate() {
+		return manufacturingDate;
+	}
+
+	public void setManufacturingDate(Date manufacturingDate) {
+		this.manufacturingDate = manufacturingDate;
 	}
 }
