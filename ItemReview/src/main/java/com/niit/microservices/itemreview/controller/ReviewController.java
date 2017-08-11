@@ -23,23 +23,23 @@ public class ReviewController {
 	private ReviewService reviewService;
 
 	// -------------------Get Reviews --------------------
-	@RequestMapping(method = RequestMethod.GET, value = "item/{Id}/reviews")
-	public List<Review> getReviews(@PathVariable("id") int Id) {
+	@RequestMapping(method = RequestMethod.GET, value = "/item/{Id}/reviews")
+	public List<Review> getReviews(@PathVariable("Id") int Id) {
 		
 		System.out.println("Request came here >> " + Id);
-		return reviewService.findBy(Id);
+		return reviewService.findByItemId(Id);
 	}
 	
 	// -------------------Get Review --------------------
-	@RequestMapping(method = RequestMethod.GET, value = "item/{itemId}/reviews/{id}")
-	public List<Review> getReview(@PathVariable("id") int Id) {
+	@RequestMapping(method = RequestMethod.GET, value = "/review/{id}")
+	public Review getReview(@PathVariable("id") int Id) {
 		
-		System.out.println("Request came here >> " + Id);
-		return reviewService.findBy(Id);
+		System.out.println("Request for getReview >> " + Id);
+		return reviewService.getReview(Id);
 	}
 	
 	// ------------------- Save Review  ----------------------
-	@RequestMapping(method = RequestMethod.POST, value = "/items/{itemId}/reviews")
+	@RequestMapping(method = RequestMethod.POST, value = "/item/{itemId}/review")
 	public void addReview(@ModelAttribute("review") Review review,
 		      BindingResult result, ModelMap model) {
 		System.out.println("Comming here........" + review.getReviewComment());
@@ -48,7 +48,7 @@ public class ReviewController {
 	}
 	
 	// ------------------- Update Review  ----------------------
-	@RequestMapping(method = RequestMethod.PUT, value = "/items/{itemId}/reviews/{Id}")
+	@RequestMapping(method = RequestMethod.PUT, value = "/item/{itemId}/review/{Id}")
 	public void updateReview(@RequestBody Review review, @PathVariable Integer itemId, @PathVariable Integer Id) {
 		
 		Item item = new Item();
@@ -59,7 +59,7 @@ public class ReviewController {
 	}
 
 	// ------------------- Delete Review  ----------------------
-	@RequestMapping(method = RequestMethod.DELETE, value = "/items/{itemsId}/reviews/{Id}")
+	@RequestMapping(method = RequestMethod.DELETE, value = "/item/{itemId}/review/{Id}")
 	public void deleteReview(@PathVariable Integer Id) {
 		reviewService.deleteReview(Id);
 	}

@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -86,7 +87,8 @@ public class Item {
 		this.manufacturingDate = manufacturingDate;
 	}
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "item", cascade = CascadeType.ALL)
+    @Column(nullable = true)
 	private List<Review> itemReviews = new ArrayList<Review>(0);
 
 	public List<Review> getItemReviews() {

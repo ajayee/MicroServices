@@ -3,6 +3,7 @@ package com.niit.microservices.itemreview.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,10 +13,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "ITEM")
 public class Item {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ITEM_ID")
@@ -29,7 +32,9 @@ public class Item {
 		this.Id = Id;
 	}
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "item", cascade = CascadeType.ALL)
+    @Column(nullable = true)
+	@JsonManagedReference
 	private List<Review> itemReviews = new ArrayList<Review>(0);
 
 	public List<Review> getItemReviews() {
@@ -39,5 +44,4 @@ public class Item {
 	public void setItemReviews(List<Review> itemReviews) {
 		this.itemReviews = itemReviews;
 	}
-
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.niit.microservices.itemreview.model.Item;
 import com.niit.microservices.itemreview.model.Review;
 import com.niit.microservices.itemreview.repository.ReviewRepository;
 
@@ -15,12 +16,23 @@ public class ReviewService {
 	@Autowired
 	private ReviewRepository reviewRepository;
 
-	public List<Review> findBy(int Id) {
+	public List<Review> findByItemId(Integer Id) {
 		
 		List<Review> reviews = new ArrayList<>();
-		reviewRepository.getByItem(Id).forEach(reviews::add);;
-
+		
+		Item item = new Item();
+		item.setId(Id);
+		
+		reviewRepository.findByItem(item).forEach(reviews::add);
 		return reviews;
+	}
+	
+	public Review getReview(Integer Id){
+		
+		Review review = reviewRepository.findOne(Id);
+		System.out.println(review.getReviewComment());
+		return review;
+		
 	}
 	
 	public void addReview(Review review) {

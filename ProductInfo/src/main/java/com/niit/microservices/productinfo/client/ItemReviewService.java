@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 // Benefits to keep the signature of the name and fall back same.
 public interface ItemReviewService {
 
-	@RequestMapping("item/{Id}/reviews")
-	public String getItemReview(@PathVariable("Id") int id);
+	@RequestMapping("/item/{Id}/reviews")
+	public String getItemReview(@PathVariable("Id") int Id);
 
 }

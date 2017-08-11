@@ -2,6 +2,7 @@ package com.niit.microservices.itemreview.model;
 
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.niit.microservices.itemreview.model.Item;
 
 @Entity
@@ -28,9 +30,10 @@ public class Review {
 
 	@Column(name = "REVIEW_DATE")
 	private Date reviewDate;
-
-	@ManyToOne(fetch = FetchType.LAZY)
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "ITEM_ID", nullable = false)
+    @JsonBackReference
 	private Item item;
 
 	public Integer getReviewID() {
