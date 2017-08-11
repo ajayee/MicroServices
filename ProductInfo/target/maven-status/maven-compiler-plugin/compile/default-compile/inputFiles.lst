@@ -1,0 +1,9 @@
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/controller/ProductController.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/client/ItemInfoService.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/model/Product.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/config/KafkaProducerConfig.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/service/ProductService.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/model/Item.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/kafka/KafkaSender.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/SpringBootWebApplication.java
+/home/msa/MicroServices/ProductInfo/src/main/java/com/niit/microservices/productinfo/client/ItemInfoClient.java

@@ -1,0 +1,12 @@
+com/niit/microservices/productinfo/SpringBootWebApplication.class
+com/niit/microservices/productinfo/client/ItemInfoService.class
+com/niit/microservices/productinfo/model/Product.class
+com/niit/microservices/productinfo/client/ItemInfoClient.class
+com/niit/microservices/productinfo/config/KafkaProducerConfig.class
+com/niit/microservices/productinfo/kafka/KafkaSender$1.class
+com/niit/microservices/productinfo/kafka/KafkaSender.class
+com/niit/microservices/productinfo/client/ItemInfoClient$ItemInfoServiceFallback.class
+com/niit/microservices/productinfo/service/ProductService.class
+com/niit/microservices/productinfo/kafka/KafkaSender$2.class
+com/niit/microservices/productinfo/model/Item.class
+com/niit/microservices/productinfo/controller/ProductController.class

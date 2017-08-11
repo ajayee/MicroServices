@@ -1,0 +1,7 @@
+server:
+  port: 9999
+
+security:
+  user:
+    name: tom
+    password: secret

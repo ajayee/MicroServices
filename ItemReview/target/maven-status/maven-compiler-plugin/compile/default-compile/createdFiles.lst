@@ -1,7 +1,6 @@
-com/niit/microservices/web/ReviewServiceController.class
 com/niit/SpringBootWebApplication.class
-com/niit/microservices/data/Review.class
-com/niit/microservices/config/ApplicationConfiguration.class
-com/niit/microservices/service/ReviewRepositoryCustom.class
-com/niit/microservices/data/Item.class
-com/niit/microservices/service/ReviewRepository.class
+com/niit/microservices/productreview/model/Review.class
+com/niit/microservices/productreview/model/Item.class
+com/niit/microservices/productreview/controller/ReviewController.class
+com/niit/microservices/productreview/repository/ReviewRepository.class
+com/niit/microservices/productreview/service/ReviewService.class

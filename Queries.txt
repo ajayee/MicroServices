@@ -3,3 +3,9 @@ CREATE TABLE IF NOT EXISTS ITEM (ITEM_ID INT AUTO_INCREMENT NOT NULL, NAME VARCH
 CREATE TABLE IF NOT EXISTS ITEM_REVIEW (REVIEW_ID INT AUTO_INCREMENT NOT NULL, ITEM_ID INT, REVIEW_COMMENT TEXT, REVIEW_DATE DATE, PRIMARY KEY (REVIEW_ID), FOREIGN KEY(ITEM_ID) REFERENCES ITEM (ITEM_ID));
 
 CREATE TABLE IF NOT EXISTS ITEM_REVIEW (REVIEW_ID INT AUTO_INCREMENT NOT NULL, ITEM_ID INT, PRIMARY KEY (REVIEW_ID), FOREIGN KEY(ITEM_ID) REFERENCES ITEM (ITEM_ID));
+
+Starting Kafka
+sudo  /home/msa/MicroServices/kafka_2.10-0.10.0.1/bin/kafka-server-start.sh /home/msa/MicroServices/kafka_2.10-0.10.0.1/config/server.properties
+
+Creating Topic
+sudo /home/msa/MicroServices/kafka_2.10-0.10.0.1/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic partitionTopic

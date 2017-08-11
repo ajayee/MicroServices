@@ -1,8 +1,5 @@
-com/niit/microservices/service/ItemRepositoryImpl.class
 com/niit/SpringBootWebApplication.class
-com/niit/microservices/web/ItemServiceController.class
-com/niit/microservices/service/ItemRepository.class
-com/niit/microservices/service/ItemRepositoryCustom.class
-com/niit/microservices/data/HelloWorld.class
-com/niit/microservices/config/ApplicationConfiguration.class
-com/niit/microservices/data/Item.class
+com/niit/microservices/iteminfo/service/ItemService.class
+com/niit/microservices/iteminfo/controller/ItemController.class
+com/niit/microservices/iteminfo/repository/ItemRepository.class
+com/niit/microservices/iteminfo/model/Item.class

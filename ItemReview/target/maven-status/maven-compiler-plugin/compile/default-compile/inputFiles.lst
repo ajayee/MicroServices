@@ -1,7 +1,6 @@
-/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/data/Item.java
-/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/service/ReviewRepositoryCustom.java
-/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/web/ReviewServiceController.java
-/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/config/ApplicationConfiguration.java
+/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/productreview/service/ReviewService.java
+/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/productreview/model/Review.java
+/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/productreview/controller/ReviewController.java
+/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/productreview/repository/ReviewRepository.java
+/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/productreview/model/Item.java
 /home/msa/MicroServices/ItemReview/src/main/java/com/niit/SpringBootWebApplication.java
-/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/data/Review.java
-/home/msa/MicroServices/ItemReview/src/main/java/com/niit/microservices/service/ReviewRepository.java
