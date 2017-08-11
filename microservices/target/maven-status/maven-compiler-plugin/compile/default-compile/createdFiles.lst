@@ -1,8 +1,0 @@
-com/niit/microservices/web/MessageServiceController.class
-com/niit/SpringBootWebApplication.class
-com/niit/microservices/data/Message.class
-com/niit/microservices/service/MessageRepositoryCustom.class
-com/niit/microservices/data/HelloWorld.class
-com/niit/microservices/config/ApplicationConfiguration.class
-com/niit/microservices/service/MessageRepositoryImpl.class
-com/niit/microservices/service/MessageRepository.class
