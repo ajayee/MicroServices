@@ -1,5 +1,0 @@
-com/niit/SpringBootWebApplication.class
-com/niit/microservices/iteminfo/service/ItemService.class
-com/niit/microservices/iteminfo/controller/ItemController.class
-com/niit/microservices/iteminfo/repository/ItemRepository.class
-com/niit/microservices/iteminfo/model/Item.class

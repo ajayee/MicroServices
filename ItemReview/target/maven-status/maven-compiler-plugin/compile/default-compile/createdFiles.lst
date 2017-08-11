@@ -1,6 +1,0 @@
-com/niit/SpringBootWebApplication.class
-com/niit/microservices/productreview/model/Review.class
-com/niit/microservices/productreview/model/Item.class
-com/niit/microservices/productreview/controller/ReviewController.class
-com/niit/microservices/productreview/repository/ReviewRepository.class
-com/niit/microservices/productreview/service/ReviewService.class
