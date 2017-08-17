@@ -4,24 +4,10 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-
 import com.niit.microservices.productinfo.model.Review;
 
-@Entity
-@Table(name = "ITEM")
 public class Item {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ITEM_ID")
+
 	private Integer itemID;
 
 	public Integer getItemID() {
@@ -32,7 +18,6 @@ public class Item {
 		this.itemID = itemID;
 	}
 
-	@Column(name = "NAME")
 	private String Name;
 
 	public String getName() {
@@ -42,10 +27,9 @@ public class Item {
 	public void setName(String name) {
 		Name = name;
 	}
-	
-	@Column(name = "MODEL_NUM")
+
 	private String modelNumber;
-	
+
 	public String getModelNumber() {
 		return modelNumber;
 	}
@@ -54,9 +38,8 @@ public class Item {
 		this.modelNumber = modelNumber;
 	}
 
-	@Column(name = "BATTERIES_REQUIRED")
 	private boolean batteriesRequired;
-	
+
 	public boolean isBatteriesRequired() {
 		return batteriesRequired;
 	}
@@ -65,9 +48,8 @@ public class Item {
 		this.batteriesRequired = batteriesRequired;
 	}
 
-	@Column(name = "WEIGHT")
 	private Integer weight;
-	
+
 	public Integer getWeight() {
 		return weight;
 	}
@@ -76,7 +58,6 @@ public class Item {
 		this.weight = weight;
 	}
 
-	@Column(name = "MANUFACTURING_DATE")
 	private Date manufacturingDate;
 
 	public Date getManufacturingDate() {
@@ -86,9 +67,7 @@ public class Item {
 	public void setManufacturingDate(Date manufacturingDate) {
 		this.manufacturingDate = manufacturingDate;
 	}
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "item", cascade = CascadeType.ALL)
-    @Column(nullable = true)
+
 	private List<Review> itemReviews = new ArrayList<Review>(0);
 
 	public List<Review> getItemReviews() {

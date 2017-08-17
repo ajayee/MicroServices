@@ -20,4 +20,10 @@ public class ProductController {
 		
 		return this.productService.getProduct(itemId);
 	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/products", produces = "application/json")
+	public Product getProducts() {
+		
+		return this.productService.getProducts();
+	}
 }

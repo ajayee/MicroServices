@@ -8,5 +8,7 @@ public interface ItemInfoService {
 
 	@RequestMapping("/items/{Id}")
 	public String getItemInfo(@PathVariable("Id") int id);
-
+	
+	@RequestMapping("/items")
+	public String getItems();
 }

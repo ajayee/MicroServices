@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface ItemReviewService {
 
 	@RequestMapping("/item/{Id}/reviews")
-	public String getItemReview(@PathVariable("Id") int Id);
+	public String getItemReviews(@PathVariable("Id") int Id);
 
 }

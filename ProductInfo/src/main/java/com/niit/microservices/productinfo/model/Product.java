@@ -1,10 +1,11 @@
 package com.niit.microservices.productinfo.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
 
 	private int Id;
-	private Item item;
-	private Review review;
 
 	public int getId() {
 		return Id;
@@ -13,20 +14,14 @@ public class Product {
 	public void setId(int id) {
 		this.Id = id;
 	}
+	
+	private List<Item> item = new ArrayList<Item>(0);
 
-	public Item getItem() {
+	public List<Item> getItem() {
 		return item;
 	}
 
-	public void setItem(Item item) {
+	public void setItem(List<Item> item) {
 		this.item = item;
-	}
-
-	public Review getReview() {
-		return review;
-	}
-
-	public void setReview(Review review) {
-		this.review = review;
 	}
 }

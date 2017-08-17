@@ -16,7 +16,7 @@ public interface ItemReviewClient extends ItemReviewService {
 	@Component
 	public class ItemReviewServiceFallback implements ItemReviewClient {
 		@Override
-		public String getItemReview(int id) {
+		public String getItemReviews(int id) {
 			return "{\"id\":" + id + ",\"name\":\"A\",\"category\":\"book\",\"description\":\"desc\","
 					+ "\"image\":\"abc.jpg\",\"price\":20.0}";
 		}

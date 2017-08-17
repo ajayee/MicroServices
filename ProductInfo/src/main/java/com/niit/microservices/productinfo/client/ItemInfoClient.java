@@ -17,5 +17,11 @@ public interface ItemInfoClient extends ItemInfoService {
 			return "{\"id\":" + id + ",\"name\":\"A\",\"category\":\"book\",\"description\":\"desc\","
 					+ "\"image\":\"abc.jpg\",\"price\":20.0}";
 		}
+		
+		@Override
+		public String getItems() {
+			return "{\"id\":,\"name\":\"A\",\"category\":\"book\",\"description\":\"desc\","
+					+ "\"image\":\"abc.jpg\",\"price\":20.0}";
+		}
 	}
 }
