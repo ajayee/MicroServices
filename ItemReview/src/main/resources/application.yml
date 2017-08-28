@@ -1,21 +1,20 @@
 server:
   port: 7003
-
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-     defaultZone: http://localhost:8761/eureka/
-      
+      defaultZone: http://localhost:8761/eureka/
 spring:
-    jpa:
-        database: MYSQL
-        hibernate:
-            ddl-auto: validate
-
-    datasource:
-        url: jdbc:mysql://localhost:3306/MicroServices
-        username: root
-        password: password
-        driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:mysql://localhost:3306/MicroServices
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+logging:
+  file: /home/msa/MicroServices/logging/item-review.log

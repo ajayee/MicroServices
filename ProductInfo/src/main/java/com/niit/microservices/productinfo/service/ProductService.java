@@ -31,18 +31,19 @@ public class ProductService {
 		String itemReviewJson = itemReviewClient.getItemReviews(id);
 				
 		ObjectMapper mapper = new ObjectMapper();
-		Item[] item = null;
+		Item item = null;
 		Review[] review = null;
 		Product product = null;
 
 		try {
+			
+			item = mapper.readValue(itemInfoJson, Item.class);
+		    itemReviewJson = itemReviewClient.getItemReviews(item.getItemID());
+		    	
+		    review = mapper.readValue(itemReviewJson, Review[].class);
+		    item.setItemReviews(Arrays.asList(review));
+		    
 
-			item = mapper.readValue(itemInfoJson, Item[].class);
-			System.out.println("itemReviewJson: " + itemReviewJson);
-			
-			review = mapper.readValue(itemReviewJson, Review[].class);
-			item[0].setItemReviews(Arrays.asList(review)); // We will always one product with one ID.
-			
 			product = new Product();
 			product.setItem(Arrays.asList(item));
 

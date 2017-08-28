@@ -1,0 +1,22 @@
+server:
+  port: 8000
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    ItemInfo:
+      path: /items/**
+      url: http://localhost:7002/items
+    ProductInfo:
+      path: /product/**
+      serviceId: PRODUCTINFO
+      
+      
+ribbon:
+  eureka:
+    enabled: false

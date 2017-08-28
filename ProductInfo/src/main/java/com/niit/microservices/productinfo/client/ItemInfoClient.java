@@ -4,7 +4,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Component;
 
 // In case of Eureka add the protocol 
-@FeignClient(name = "http://ITEM-INFO", fallback = ItemInfoClient.ItemInfoServiceFallback.class)
+@FeignClient(name = "http://ITEMINFO", fallback = ItemInfoClient.ItemInfoServiceFallback.class)
 //
 // Without eureka: name is used to fetch properties from yml.
 //@FeignClient(name = "ITEMINFO-SERVICE", fallback = ItemInfoClient.ItemInfoServiceFallback.class)

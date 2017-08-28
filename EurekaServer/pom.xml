@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.niit</groupId>
-	<artifactId>microservices</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<groupId>com.niit.microservices</groupId>
+	<artifactId>eureka-server</artifactId>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>Sample Spring Boot Project</name>
@@ -18,7 +18,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>com.niit.SpringBootWebApplication</start-class>
+		<start-class>com.niit.microservices.SpringBootWebApplication</start-class>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -49,7 +49,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.12</version>
+				<configuration>
+					<imageName>discovery/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+				</configuration>
 
+			</plugin>
 		</plugins>
 	</build>
 

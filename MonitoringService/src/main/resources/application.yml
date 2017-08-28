@@ -1,6 +1,16 @@
 server:
   port: 7979
 
+info:
+  component: Turbine
+
+turbine:
+  clusterNameExpression: new String("default")
+  appConfig: ProductService
+
+management:
+  port: 7990
+
 eureka:
   client:
     registerWithEureka: true

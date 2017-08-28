@@ -22,3 +22,5 @@ kafka:
     helloworld: helloworld.t
     json: jsonTopic
     partitioned: partitionTopic
+logging:
+  file: /home/msa/MicroServices/logging/product-info.log
